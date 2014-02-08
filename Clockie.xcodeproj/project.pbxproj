@@ -37,23 +37,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		77989E0818A5D03B002266C0 /* Chess Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chess Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77989E0818A5D03B002266C0 /* Clockie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clockie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77989E0B18A5D03B002266C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77989E0D18A5D03B002266C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		77989E0F18A5D03B002266C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		77989E1318A5D03B002266C0 /* Chess Clock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chess Clock-Info.plist"; sourceTree = "<group>"; };
+		77989E1318A5D03B002266C0 /* Clockie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Clockie-Info.plist"; sourceTree = "<group>"; };
 		77989E1518A5D03B002266C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77989E1718A5D03B002266C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		77989E1918A5D03B002266C0 /* Chess Clock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chess Clock-Prefix.pch"; sourceTree = "<group>"; };
+		77989E1918A5D03B002266C0 /* Clockie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clockie-Prefix.pch"; sourceTree = "<group>"; };
 		77989E1A18A5D03B002266C0 /* CCLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCLAppDelegate.h; sourceTree = "<group>"; };
 		77989E1B18A5D03B002266C0 /* CCLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLAppDelegate.m; sourceTree = "<group>"; };
 		77989E1E18A5D03B002266C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77989E2018A5D03B002266C0 /* CCLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCLViewController.h; sourceTree = "<group>"; };
 		77989E2118A5D03B002266C0 /* CCLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLViewController.m; sourceTree = "<group>"; };
 		77989E2318A5D03B002266C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		77989E2918A5D03B002266C0 /* Chess ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chess ClockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77989E2918A5D03B002266C0 /* ClockieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77989E2A18A5D03B002266C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		77989E3218A5D03B002266C0 /* Chess ClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chess ClockTests-Info.plist"; sourceTree = "<group>"; };
+		77989E3218A5D03B002266C0 /* ClockieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClockieTests-Info.plist"; sourceTree = "<group>"; };
 		77989E3418A5D03B002266C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77989E3618A5D03B002266C0 /* Chess_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chess_ClockTests.m; sourceTree = "<group>"; };
 		77989E4618A5D516002266C0 /* CCLClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLClockManager.h; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		77989E0918A5D03B002266C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77989E0818A5D03B002266C0 /* Chess Clock.app */,
-				77989E2918A5D03B002266C0 /* Chess ClockTests.xctest */,
+				77989E0818A5D03B002266C0 /* Clockie.app */,
+				77989E2918A5D03B002266C0 /* ClockieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,10 +141,10 @@
 		77989E1218A5D03B002266C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				77989E1318A5D03B002266C0 /* Chess Clock-Info.plist */,
+				77989E1318A5D03B002266C0 /* Clockie-Info.plist */,
 				77989E1418A5D03B002266C0 /* InfoPlist.strings */,
 				77989E1718A5D03B002266C0 /* main.m */,
-				77989E1918A5D03B002266C0 /* Chess Clock-Prefix.pch */,
+				77989E1918A5D03B002266C0 /* Clockie-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 		77989E3118A5D03B002266C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				77989E3218A5D03B002266C0 /* Chess ClockTests-Info.plist */,
+				77989E3218A5D03B002266C0 /* ClockieTests-Info.plist */,
 				77989E3318A5D03B002266C0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		77989E0718A5D03B002266C0 /* Chess Clock */ = {
+		77989E0718A5D03B002266C0 /* Clockie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77989E3A18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "Chess Clock" */;
+			buildConfigurationList = 77989E3A18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "Clockie" */;
 			buildPhases = (
 				77989E0418A5D03B002266C0 /* Sources */,
 				77989E0518A5D03B002266C0 /* Frameworks */,
@@ -182,14 +182,14 @@
 			);
 			dependencies = (
 			);
-			name = "Chess Clock";
+			name = Clockie;
 			productName = "Chess Clock";
-			productReference = 77989E0818A5D03B002266C0 /* Chess Clock.app */;
+			productReference = 77989E0818A5D03B002266C0 /* Clockie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77989E2818A5D03B002266C0 /* Chess ClockTests */ = {
+		77989E2818A5D03B002266C0 /* ClockieTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77989E3D18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "Chess ClockTests" */;
+			buildConfigurationList = 77989E3D18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "ClockieTests" */;
 			buildPhases = (
 				77989E2518A5D03B002266C0 /* Sources */,
 				77989E2618A5D03B002266C0 /* Frameworks */,
@@ -200,9 +200,9 @@
 			dependencies = (
 				77989E2F18A5D03B002266C0 /* PBXTargetDependency */,
 			);
-			name = "Chess ClockTests";
+			name = ClockieTests;
 			productName = "Chess ClockTests";
-			productReference = 77989E2918A5D03B002266C0 /* Chess ClockTests.xctest */;
+			productReference = 77989E2918A5D03B002266C0 /* ClockieTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -223,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77989E0318A5D03B002266C0 /* Build configuration list for PBXProject "Chess Clock" */;
+			buildConfigurationList = 77989E0318A5D03B002266C0 /* Build configuration list for PBXProject "Clockie" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,8 +236,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				77989E0718A5D03B002266C0 /* Chess Clock */,
-				77989E2818A5D03B002266C0 /* Chess ClockTests */,
+				77989E0718A5D03B002266C0 /* Clockie */,
+				77989E2818A5D03B002266C0 /* ClockieTests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +290,7 @@
 /* Begin PBXTargetDependency section */
 		77989E2F18A5D03B002266C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77989E0718A5D03B002266C0 /* Chess Clock */;
+			target = 77989E0718A5D03B002266C0 /* Clockie */;
 			targetProxy = 77989E2E18A5D03B002266C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -401,9 +401,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chess Clock/Chess Clock-Prefix.pch";
-				INFOPLIST_FILE = "Chess Clock/Chess Clock-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Chess Clock/Clockie-Prefix.pch";
+				INFOPLIST_FILE = "Chess Clock/Clockie-Info.plist";
+				PRODUCT_NAME = Clockie;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,9 +417,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chess Clock/Chess Clock-Prefix.pch";
-				INFOPLIST_FILE = "Chess Clock/Chess Clock-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Chess Clock/Clockie-Prefix.pch";
+				INFOPLIST_FILE = "Chess Clock/Clockie-Info.plist";
+				PRODUCT_NAME = Clockie;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,8 +440,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Chess ClockTests/Chess ClockTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Chess ClockTests/ClockieTests-Info.plist";
+				PRODUCT_NAME = ClockieTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -458,8 +458,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chess Clock/Chess Clock-Prefix.pch";
-				INFOPLIST_FILE = "Chess ClockTests/Chess ClockTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Chess ClockTests/ClockieTests-Info.plist";
+				PRODUCT_NAME = ClockieTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -468,7 +468,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77989E0318A5D03B002266C0 /* Build configuration list for PBXProject "Chess Clock" */ = {
+		77989E0318A5D03B002266C0 /* Build configuration list for PBXProject "Clockie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77989E3818A5D03B002266C0 /* Debug */,
@@ -477,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77989E3A18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "Chess Clock" */ = {
+		77989E3A18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "Clockie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77989E3B18A5D03B002266C0 /* Debug */,
@@ -486,7 +486,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77989E3D18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "Chess ClockTests" */ = {
+		77989E3D18A5D03B002266C0 /* Build configuration list for PBXNativeTarget "ClockieTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77989E3E18A5D03B002266C0 /* Debug */,

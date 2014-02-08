@@ -111,7 +111,7 @@
     NSInteger time = (NSInteger) interval;
     NSInteger sec = time % 60;
     NSInteger min = (time / 60) % 60;
-    return [NSString stringWithFormat:@"%i:%02i", min, sec];
+    return [NSString stringWithFormat:@"%i:%02i", (int) min, (int) sec];
     
 }
 

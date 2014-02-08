@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77989E0718A5D03B002266C0"
-               BuildableName = "Chess Clock.app"
-               BlueprintName = "Chess Clock"
-               ReferencedContainer = "container:Chess Clock.xcodeproj">
+               BuildableName = "Clockie.app"
+               BlueprintName = "Clockie"
+               ReferencedContainer = "container:Clockie.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77989E2818A5D03B002266C0"
-               BuildableName = "Chess ClockTests.xctest"
-               BlueprintName = "Chess ClockTests"
-               ReferencedContainer = "container:Chess Clock.xcodeproj">
+               BuildableName = "ClockieTests.xctest"
+               BlueprintName = "ClockieTests"
+               ReferencedContainer = "container:Clockie.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77989E0718A5D03B002266C0"
-            BuildableName = "Chess Clock.app"
-            BlueprintName = "Chess Clock"
-            ReferencedContainer = "container:Chess Clock.xcodeproj">
+            BuildableName = "Clockie.app"
+            BlueprintName = "Clockie"
+            ReferencedContainer = "container:Clockie.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77989E0718A5D03B002266C0"
-            BuildableName = "Chess Clock.app"
-            BlueprintName = "Chess Clock"
-            ReferencedContainer = "container:Chess Clock.xcodeproj">
+            BuildableName = "Clockie.app"
+            BlueprintName = "Clockie"
+            ReferencedContainer = "container:Clockie.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77989E0718A5D03B002266C0"
-            BuildableName = "Chess Clock.app"
-            BlueprintName = "Chess Clock"
-            ReferencedContainer = "container:Chess Clock.xcodeproj">
+            BuildableName = "Clockie.app"
+            BlueprintName = "Clockie"
+            ReferencedContainer = "container:Clockie.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
