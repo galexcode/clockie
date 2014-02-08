@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCLViewController : UIViewController
+@interface CCLViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end

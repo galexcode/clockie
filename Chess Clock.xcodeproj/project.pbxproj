@@ -21,6 +21,7 @@
 		77989E2D18A5D03B002266C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77989E0F18A5D03B002266C0 /* UIKit.framework */; };
 		77989E3518A5D03B002266C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77989E3318A5D03B002266C0 /* InfoPlist.strings */; };
 		77989E3718A5D03B002266C0 /* Chess_ClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77989E3618A5D03B002266C0 /* Chess_ClockTests.m */; };
+		77989E4818A5D516002266C0 /* CCLClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77989E4718A5D516002266C0 /* CCLClockManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		77989E3218A5D03B002266C0 /* Chess ClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chess ClockTests-Info.plist"; sourceTree = "<group>"; };
 		77989E3418A5D03B002266C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77989E3618A5D03B002266C0 /* Chess_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chess_ClockTests.m; sourceTree = "<group>"; };
+		77989E4618A5D516002266C0 /* CCLClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLClockManager.h; sourceTree = "<group>"; };
+		77989E4718A5D516002266C0 /* CCLClockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLClockManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		77989E1118A5D03B002266C0 /* Chess Clock */ = {
 			isa = PBXGroup;
 			children = (
+				77989E4618A5D516002266C0 /* CCLClockManager.h */,
+				77989E4718A5D516002266C0 /* CCLClockManager.m */,
 				77989E1A18A5D03B002266C0 /* CCLAppDelegate.h */,
 				77989E1B18A5D03B002266C0 /* CCLAppDelegate.m */,
 				77989E1D18A5D03B002266C0 /* Main.storyboard */,
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77989E1818A5D03B002266C0 /* main.m in Sources */,
+				77989E4818A5D516002266C0 /* CCLClockManager.m in Sources */,
 				77989E1C18A5D03B002266C0 /* CCLAppDelegate.m in Sources */,
 				77989E2218A5D03B002266C0 /* CCLViewController.m in Sources */,
 			);
