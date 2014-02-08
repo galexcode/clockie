@@ -8,6 +8,7 @@
 
 #import "CCLViewController.h"
 #import "CCLClockManager.h"
+#import "DYUserDefaults.h"
 
 #define TIMER_INTERVAL 50
 
@@ -22,6 +23,7 @@
 @property (nonatomic) UITapGestureRecognizer *topRecog;
 @property (nonatomic) UITapGestureRecognizer *bottomRecog;
 
+
 @end
 
 @implementation CCLViewController
@@ -29,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.clockMan = [[CCLClockManager alloc] initWithBase:5 increment:0]; // TODO
+    [self resetClockManager];
     
     self.topRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
     self.bottomRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
@@ -40,28 +42,96 @@
     self.topRecog.delegate = self;
     self.bottomRecog.delegate = self;
     
+    self.topClock.transform = CGAffineTransformMakeRotation(M_PI);
+    
+    
+}
+
+- (void)resetClockManager
+{
+    NSDictionary *settings = [DYUserDefaults getSettings];
+    int base = [settings[@"Base"] intValue] * 60;
+    int increment = [settings[@"Increment"] intValue];
+    
+	self.clockMan = [[CCLClockManager alloc] initWithBase:base increment:increment];
     [self updateLabels:nil];
-    [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL / 1000.0 target:self selector:@selector(updateLabels:) userInfo:nil repeats:YES];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.clockMan.status == NOBODY || self.clockMan.status == DONE) {
+        [self resetClockManager];
+    }
 }
 
 - (void)updateLabels:(NSTimer *)timer
 {
-    NSLog(@"Updating labels");
     self.topClock.text = [self.clockMan timeForPlayer:1];
     self.bottomClock.text = [self.clockMan timeForPlayer:0];
+
+    switch (self.clockMan.status) {
+        case NOBODY: case DONE:
+            self.bottomClock.backgroundColor = [UIColor whiteColor];
+            self.topClock.backgroundColor = [UIColor whiteColor];
+            [timer invalidate];
+            break;
+        case PLAYER_0:
+            self.bottomClock.backgroundColor = [UIColor orangeColor];
+            self.topClock.backgroundColor = [UIColor whiteColor];
+            break;
+        case PLAYER_1:
+            self.topClock.backgroundColor = [UIColor orangeColor];
+            self.bottomClock.backgroundColor = [UIColor whiteColor];
+            break;
+    }
+    
 }
 
 - (void)handleTapFrom:(UITapGestureRecognizer *)recognizer
 {
-    if (self.clockMan.status == NOBODY) {
-        NSLog(@"starting clock");
-        [self.clockMan start];
-    } else if (recognizer == self.topRecog && self.clockMan.status == PLAYER_1) {
-        NSLog(@"Tapped top clock");
-        [self.clockMan swap];
-    } else if (recognizer == self.bottomRecog && self.clockMan.status == PLAYER_0) {
-        NSLog(@"Tapped bottom clock");
-        [self.clockMan swap];
+    switch (self.clockMan.status) {
+        case NOBODY:
+            // Start the clock
+            [self.clockMan start];
+            [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL / 1000.0 target:self selector:@selector(updateLabels:) userInfo:nil repeats:YES];
+            break;
+        case DONE:
+            // Do nothing. The user must reset.
+            break;
+        case PLAYER_0:
+            if (recognizer == self.bottomRecog) {
+                [self.clockMan swap];
+            }
+            break;
+        case PLAYER_1:
+            if (recognizer == self.topRecog) {
+                [self.clockMan swap];
+            }
+            break;
+    }
+    
+}
+- (IBAction)pauseOrReset:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Reset Clocks" otherButtonTitles:nil];
+    switch (self.clockMan.status) {
+        case PLAYER_0: case PLAYER_1:
+            // Pause
+            [self.clockMan stop];
+            break;
+        case NOBODY: case DONE:
+            // Reset
+            [actionSheet showInView:self.view];
+            break;
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self resetClockManager];
     }
 }
 

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum ACTIVE_INDEX {
-    NOBODY, PLAYER_0, PLAYER_1
+    NOBODY, PLAYER_0, PLAYER_1, DONE
 } ACTIVE_INDEX;
 
 @interface CCLClockManager : NSObject

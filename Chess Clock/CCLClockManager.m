@@ -12,6 +12,7 @@
 
 @interface CCLClockManager()
 
+@property ACTIVE_INDEX indexBackup;
 @property ACTIVE_INDEX activeIndex;
 @property NSTimeInterval player0;
 @property NSTimeInterval player1;
@@ -27,6 +28,7 @@
 {
     self = [super init];
     if (self) {
+        self.indexBackup = NOBODY;
         self.activeIndex = NOBODY;
         self.player0 = baseSeconds;
         self.player1 = baseSeconds;
@@ -37,8 +39,17 @@
 
 - (void)start
 {
+    if (self.activeIndex == DONE) {
+        return;
+    }
     self.lastDate = [NSDate date];
-    self.activeIndex = PLAYER_0;
+    if (self.indexBackup != NOBODY) {
+        // Restore from backup
+        self.activeIndex = self.indexBackup;
+        self.indexBackup = NOBODY;
+    } else {
+        self.activeIndex = PLAYER_0;
+    }
     [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL / 1000.0 target:self selector:@selector(updateInterval:) userInfo:nil repeats:YES];
 }
 - (void)swap
@@ -54,10 +65,13 @@
             self.player1 += self.increment;
             self.activeIndex = PLAYER_0;
             break;
+        case DONE:
+            return;
     }
 }
 - (void)stop
 {
+    self.indexBackup = self.activeIndex;
     self.activeIndex = NOBODY;
 }
 - (void)updateInterval:(NSTimer *)timer
@@ -76,6 +90,7 @@
     }
     
     if (self.player0 <= 0 || self.player1 <= 0) {
+        self.activeIndex = DONE;
         [timer invalidate];
     }
 }

@@ -22,6 +22,8 @@
 		77989E3518A5D03B002266C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77989E3318A5D03B002266C0 /* InfoPlist.strings */; };
 		77989E3718A5D03B002266C0 /* Chess_ClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77989E3618A5D03B002266C0 /* Chess_ClockTests.m */; };
 		77989E4818A5D516002266C0 /* CCLClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77989E4718A5D516002266C0 /* CCLClockManager.m */; };
+		77989E4B18A607A5002266C0 /* CCLSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77989E4A18A607A5002266C0 /* CCLSettingsTableViewController.m */; };
+		77989E4E18A60D27002266C0 /* DYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 77989E4D18A60D27002266C0 /* DYUserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		77989E3618A5D03B002266C0 /* Chess_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chess_ClockTests.m; sourceTree = "<group>"; };
 		77989E4618A5D516002266C0 /* CCLClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLClockManager.h; sourceTree = "<group>"; };
 		77989E4718A5D516002266C0 /* CCLClockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLClockManager.m; sourceTree = "<group>"; };
+		77989E4918A607A5002266C0 /* CCLSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLSettingsTableViewController.h; sourceTree = "<group>"; };
+		77989E4A18A607A5002266C0 /* CCLSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLSettingsTableViewController.m; sourceTree = "<group>"; };
+		77989E4C18A60D27002266C0 /* DYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYUserDefaults.h; sourceTree = "<group>"; };
+		77989E4D18A60D27002266C0 /* DYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYUserDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +121,15 @@
 		77989E1118A5D03B002266C0 /* Chess Clock */ = {
 			isa = PBXGroup;
 			children = (
+				77989E4C18A60D27002266C0 /* DYUserDefaults.h */,
+				77989E4D18A60D27002266C0 /* DYUserDefaults.m */,
 				77989E4618A5D516002266C0 /* CCLClockManager.h */,
 				77989E4718A5D516002266C0 /* CCLClockManager.m */,
 				77989E1A18A5D03B002266C0 /* CCLAppDelegate.h */,
 				77989E1B18A5D03B002266C0 /* CCLAppDelegate.m */,
 				77989E1D18A5D03B002266C0 /* Main.storyboard */,
+				77989E4918A607A5002266C0 /* CCLSettingsTableViewController.h */,
+				77989E4A18A607A5002266C0 /* CCLSettingsTableViewController.m */,
 				77989E2018A5D03B002266C0 /* CCLViewController.h */,
 				77989E2118A5D03B002266C0 /* CCLViewController.m */,
 				77989E2318A5D03B002266C0 /* Images.xcassets */,
@@ -205,6 +215,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Daylen Yang";
 				TargetAttributes = {
+					77989E0718A5D03B002266C0 = {
+						DevelopmentTeam = NR8F7ZFLA3;
+					};
 					77989E2818A5D03B002266C0 = {
 						TestTargetID = 77989E0718A5D03B002266C0;
 					};
@@ -256,9 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77989E1818A5D03B002266C0 /* main.m in Sources */,
+				77989E4B18A607A5002266C0 /* CCLSettingsTableViewController.m in Sources */,
 				77989E4818A5D516002266C0 /* CCLClockManager.m in Sources */,
 				77989E1C18A5D03B002266C0 /* CCLAppDelegate.m in Sources */,
 				77989E2218A5D03B002266C0 /* CCLViewController.m in Sources */,
+				77989E4E18A60D27002266C0 /* DYUserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +400,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chess Clock/Chess Clock-Prefix.pch";
 				INFOPLIST_FILE = "Chess Clock/Chess Clock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,10 +416,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chess Clock/Chess Clock-Prefix.pch";
 				INFOPLIST_FILE = "Chess Clock/Chess Clock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
