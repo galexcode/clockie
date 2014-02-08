@@ -1,5 +1,5 @@
 # Clockie
-Clockie is a the best chess clock for the iPhone.
+Clockie is the best chess clock for the iPhone.
 
 # Status
 Coming soon to the App Store.
