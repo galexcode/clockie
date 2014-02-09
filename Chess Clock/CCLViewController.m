@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     [self resetClockManager];
     
     self.topRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
