@@ -16,8 +16,8 @@ typedef enum ACTIVE_INDEX {
 
 - (id)initWithBase:(long)baseSeconds increment:(long)incrementSeconds;
 
-- (void)start; // Starts clock for player 0
-- (void)swap; // Swaps the clock and increments
+- (void)startForIndex:(ACTIVE_INDEX)index; // Starts the clocks
+- (void)swap; // Swaps the clocks and increments
 - (void)stop; // Stops the clocks
 
 - (ACTIVE_INDEX)status;

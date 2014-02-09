@@ -37,7 +37,7 @@
     return self;
 }
 
-- (void)start
+- (void)startForIndex:(ACTIVE_INDEX)index;
 {
     if (self.activeIndex == DONE) {
         return;
@@ -48,7 +48,7 @@
         self.activeIndex = self.indexBackup;
         self.indexBackup = NOBODY;
     } else {
-        self.activeIndex = PLAYER_0;
+        self.activeIndex = index;
     }
     [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL / 1000.0 target:self selector:@selector(updateInterval:) userInfo:nil repeats:YES];
 }

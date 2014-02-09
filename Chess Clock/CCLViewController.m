@@ -20,8 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *topClock;
 @property (weak, nonatomic) IBOutlet UILabel *bottomClock;
 
-@property (nonatomic) UITapGestureRecognizer *topRecog;
-@property (nonatomic) UITapGestureRecognizer *bottomRecog;
+@property (nonatomic) UILongPressGestureRecognizer *topRecog;
+@property (nonatomic) UILongPressGestureRecognizer *bottomRecog;
 
 
 @end
@@ -34,8 +34,11 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     [self resetClockManager];
     
-    self.topRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
-    self.bottomRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+    self.topRecog = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+    self.bottomRecog = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+    
+    self.topRecog.minimumPressDuration = 0.0;
+    self.bottomRecog.minimumPressDuration = 0.0;
     
     [self.topClock addGestureRecognizer:self.topRecog];
     [self.bottomClock addGestureRecognizer:self.bottomRecog];
@@ -90,12 +93,12 @@
     
 }
 
-- (void)handleTapFrom:(UITapGestureRecognizer *)recognizer
+- (void)handleTapFrom:(UILongPressGestureRecognizer *)recognizer
 {
     switch (self.clockMan.status) {
         case NOBODY:
             // Start the clock
-            [self.clockMan start];
+            [self.clockMan startForIndex:(recognizer == self.topRecog) ? PLAYER_0 : PLAYER_1];
             [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL / 1000.0 target:self selector:@selector(updateLabels:) userInfo:nil repeats:YES];
             break;
         case DONE:
