@@ -2,7 +2,7 @@
 Clockie is the best chess clock for the iPhone.
 
 # Status
-Coming soon to the App Store.
+Free on [the App Store](https://itunes.apple.com/us/app/clockie-minimal-chess-clock/id816844998?ls=1&mt=8).
 
 # Features 
 - It's orange 
