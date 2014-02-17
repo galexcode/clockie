@@ -109,6 +109,9 @@
 + (NSString *)stringForTimeInterval:(NSTimeInterval)interval
 {
     NSInteger time = (NSInteger) interval;
+    if (time <= 0) {
+        return @"TIME";
+    }
     NSInteger sec = time % 60;
     NSInteger min = (time / 60) % 60;
     return [NSString stringWithFormat:@"%i:%02i", (int) min, (int) sec];
